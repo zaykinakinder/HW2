@@ -1,0 +1,48 @@
+import java.util.Scanner;
+
+public class hw1 {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Вводите что-нибудь: ");
+        StringBuilder l1 = new StringBuilder(scanner.nextLine());
+        System.out.println("Ввeдите еще что-нибудь: ");
+        StringBuilder l2 = new StringBuilder(scanner.nextLine());
+        if (l1.toString().contains(l2.toString())) {
+            int startIndex = l1.indexOf(l2.toString());
+            int endIndex = startIndex + l2.length();
+            System.out.println("Частично совпадают co со строкой l2: " + l2 + " начиная с символа №: " + startIndex + " Заканчивая символом № : " + endIndex);
+        }
+        /////////////////// end of task 1
+
+        /////////////////////task 2
+        StringBuilder l3 = new StringBuilder(l2.reverse());
+        if (l1.toString().equals(l3.toString())) {
+            System.out.println("Строка л1 является переверштышем строки л2");
+        }
+///////////////////////////////task 3
+        System.out.println(" Задание номер три");
+        System.out.println("Введите строку для переворота: ");
+        StringBuilder l222 = new StringBuilder(scanner.nextLine());
+        System.out.println(l222.reverse());
+
+        ////////////////////task 4
+        System.out.println("Введите цифру 1: ");
+        StringBuilder n1 = new StringBuilder(scanner.nextLine());
+        System.out.println("Ввeдите цифру 2: ");
+        StringBuilder n2 = new StringBuilder(scanner.nextLine());
+        int r1 = Integer.parseInt(n1.toString()) + Integer.parseInt(n2.toString());
+        StringBuilder res1 = new StringBuilder(n1 + "+" + n2  + "=" );
+        res1.replace("=", "равно");
+        System.out.println(res1.append(r1));
+        int r2 = Integer.parseInt(n1.toString()) - Integer.parseInt(n2.toString());
+        StringBuilder res2 = new StringBuilder(n1 + "-" + n2  + "=" );
+        System.out.println(res2.append(r2));
+        int r3 = Integer.parseInt(n1.toString()) * Integer.parseInt(n2.toString());
+        StringBuilder res3 = new StringBuilder(n1 + "*" + n2  + "=");
+        System.out.println(res3.append(r3));
+
+        /////////////////////
+        ///////////////////// task 5
+    }
+}
+
